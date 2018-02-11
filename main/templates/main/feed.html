@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% block extras %}
+{% endblock %}
+{% block navitems %}
+{% endblock %}
+{% block content %}
+<div id="body-content">
+  {% for post in posts %}
+    {% include 'main/post-summary.html' %}
+  {% endfor %}
+</div>
+{% endblock %}

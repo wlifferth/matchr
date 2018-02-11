@@ -1,0 +1,19 @@
+<a href="{% url 'post' post.id %}">
+  <div class="content-box light-shadow feed-box">
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="{{ post.article }}" class="post-summary-img"/>
+      </div>
+      <div class="cols-xs-9">
+        <div class="content-box-title">
+          {{ post.title }}
+        </div>
+        {{ post.user }}
+        <br>
+        <p>
+          {{ post.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
