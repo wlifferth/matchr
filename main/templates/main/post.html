@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+{{ post.title }}
+{% endblock %}
+{% block content %}
+<script>
+  var hotURL = '{% url 'vote' post_id=post.id option_id=option.id hot=1 %}'
+  var notURL = '{% url 'vote' post_id=post.id option_id=option.id hot=0 %}'
+</script>
+<div id="body-content">
+  <div class="row">
+    <div class="col-xs-5">
+      <div id="article-panel" class="match-image-container light-shadow">
+        <img src="{{ post.article }}" class="match-image"/>
+      </div>
+    </div>
+    <div class="col-xs-5">
+      <div id="option-container">
+      <div id="option-panel" class="match-image-container light-shadow">
+        <img id="option-img" src="{{ option.url }}" class="match-image"/>
+      </div>
+    </div>
+    </div>
+    <div class="col-xs-2">
+      <button class="btn light-shadow" id="hot-btn">Hot</button>
+      <button class="btn light-shadow" id="not-btn">Not</button>
+    </div>
+  </div>
+</div>
+<script src="{% static 'main/voting-app.js' %}">
+</script>
+{% endblock %}

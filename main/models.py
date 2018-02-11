@@ -14,6 +14,3 @@ class Option(models.Model):
     url = models.CharField(max_length=200)
     hot_count = models.IntegerField(default=0)
     not_count = models.IntegerField(default=0)
-
-    class Meta:
-        ordering = ('hot_count',)

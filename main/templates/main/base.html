@@ -31,7 +31,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{% url 'feed' %}" class="feed">Feed</a></li>
-        <li><a href="{% url 'results' %}" class="results">Results</a></li>
+        <li><a href="{% url 'results' user="wlifferth" %}" class="results">Results</a></li>
         <li><a href="{% url 'new' %}" class="new">New Match</a></li>
         {% block navitems %}
         {% endblock %}

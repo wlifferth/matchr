@@ -5,8 +5,8 @@
 {% endblock %}
 {% block content %}
 <div id="body-content">
-  <div class="content-box">
-    <p>results</p>
-  </div>
+  {% for post in posts %}
+    {% include 'main/results-summary.html' %}
+  {% endfor %}
 </div>
 {% endblock %}

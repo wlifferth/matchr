@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% block extras %}
+{% endblock %}
+{% block navitems %}
+{% endblock %}
+{% block content %}
+<div id="body-content" class="result-body">
+  <div class="row">
+    <div class="col-xs-4">
+      <div id="article-panel" class="match-image-container result-match-image-container light-shadow">
+        <img src="{{ post.article }}" class="match-image"/>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      {% for option in options %}
+        {% include 'main/option-result.html' %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+{% endblock %}
